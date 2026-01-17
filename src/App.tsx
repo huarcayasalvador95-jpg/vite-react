@@ -1,36 +1,30 @@
-function App() {
-  const jugarHaxball = () => {
-    window.open("https://www.haxball.com/play", "_self");
+export default function App() {
+  const jugar = () => {
+    window.location.href = "https://www.haxball.com/play";
   };
 
   return (
     <div style={{ 
       display: 'flex', 
-      flexDirection: 'column', 
       justifyContent: 'center', 
       alignItems: 'center', 
       height: '100vh', 
-      backgroundColor: '#1a1a1a', 
-      color: 'white' 
+      backgroundColor: '#1a1a1a' 
     }}>
-      <h1 style={{ marginBottom: '20px' }}>HaxBall Launcher</h1>
       <button 
-        onClick={jugarHaxball}
+        onClick={jugar}
         style={{
-          padding: '15px 30px',
-          fontSize: '20px',
+          padding: '20px 40px',
+          fontSize: '24px',
           backgroundColor: '#4CAF50',
           color: 'white',
           border: 'none',
-          borderRadius: '8px',
-          cursor: 'pointer',
-          fontWeight: 'bold'
+          borderRadius: '10px',
+          cursor: 'pointer'
         }}
       >
-        ¡ENTRAR A JUGAR!
+        ¡ENTRAR A HAXBALL!
       </button>
     </div>
   );
 }
-
-export default App;
