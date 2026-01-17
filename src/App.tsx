@@ -1,10 +1,4 @@
 export default function App() {
-  const jugarHaxball = () => {
-    // Al usar "_blank", el juego se abre en el navegador real fuera de Discord
-    // Esto evita que el sistema de seguridad de HaxBall bloquee la pantalla
-    window.open("https://www.haxball.com/play", "_blank");
-  };
-
   return (
     <div style={{ 
       display: 'flex', 
@@ -14,30 +8,45 @@ export default function App() {
       height: '100vh', 
       backgroundColor: '#1a1a1a',
       color: 'white',
-      fontFamily: 'sans-serif'
+      fontFamily: 'system-ui, -apple-system, sans-serif',
+      textAlign: 'center',
+      margin: 0
     }}>
-      <h1 style={{ marginBottom: '20px', color: '#4CAF50' }}>HaxBall Launcher</h1>
+      <h1 style={{ marginBottom: '10px', color: '#4CAF50', fontSize: '28px' }}>
+        HaxBall Launcher
+      </h1>
       
-      <button 
-        onClick={jugarHaxball}
+      <p style={{ marginBottom: '30px', color: '#ccc' }}>
+        Presiona el botón para abrir el juego en tu navegador.
+      </p>
+
+      {/* Este enlace tiene estilo de botón para evitar bloqueos de pop-ups de Discord */}
+      <a 
+        href="https://www.haxball.com/play" 
+        target="_blank" 
+        rel="noopener noreferrer"
         style={{
-          padding: '20px 40px',
-          fontSize: '22px',
+          padding: '18px 36px',
+          fontSize: '20px',
           backgroundColor: '#4CAF50',
           color: 'white',
-          border: 'none',
-          borderRadius: '12px',
-          cursor: 'pointer',
+          textDecoration: 'none',
+          borderRadius: '50px',
           fontWeight: 'bold',
-          boxShadow: '0px 4px 15px rgba(76, 175, 80, 0.4)'
+          transition: 'transform 0.2s',
+          boxShadow: '0px 8px 20px rgba(76, 175, 80, 0.3)',
+          display: 'inline-block'
         }}
       >
-        ¡JUGAR AHORA!
-      </button>
+        ¡ABRIR JUEGO!
+      </a>
 
-      <p style={{ marginTop: '20px', color: '#888', fontSize: '14px' }}>
-        El juego se abrirá en una pestaña nueva para evitar bloqueos.
-      </p>
+      <div style={{ marginTop: '40px', padding: '0 20px' }}>
+        <p style={{ color: '#666', fontSize: '12px', lineHeight: '1.5' }}>
+          Nota: Si al hacer clic no sucede nada, <br/>
+          revisa si tu navegador bloqueó una ventana emergente.
+        </p>
+      </div>
     </div>
   );
 }
