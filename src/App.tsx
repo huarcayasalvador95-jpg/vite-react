@@ -12,7 +12,7 @@ export default function App() {
       display: 'flex', flexDirection: 'column', justifyContent: 'center', 
       alignItems: 'center', height: '100vh', backgroundColor: '#1a1a1a', color: 'white' 
     }}>
-      <h1 style={{ color: '#4CAF50' }}>HaxBall Oficial</h1>
+      <h1 style={{ color: '#4CAF50' }}>HaxBall 2 Oficial</h1>
       <p>Si el botón no abre, dale clic derecho y "Abrir enlace"</p>
       
       <button 
