@@ -1,29 +1,39 @@
-import { useEffect } from 'react';
+import React from 'react';
 
-export default function App() {
-  
-  const abrirHaxball = () => {
-    // Esta es la forma oficial. Si el SDK no carga, usa el respaldo.
+function App() {
+  const jugar = () => {
+    // Intentamos abrir en pestaña nueva
     window.open("https://www.haxball.com/play", "_blank");
   };
 
   return (
     <div style={{ 
-      display: 'flex', flexDirection: 'column', justifyContent: 'center', 
-      alignItems: 'center', height: '100vh', backgroundColor: '#1a1a1a', color: 'white' 
+      display: 'flex', 
+      flexDirection: 'column', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      height: '100vh', 
+      backgroundColor: '#1a1a1a', 
+      color: 'white',
+      fontFamily: 'sans-serif'
     }}>
-      <h1 style={{ color: '#4CAF50' }}>HaxBall 2 Oficial</h1>
-      <p>Si el botón no abre, dale clic derecho y "Abrir enlace"</p>
-      
+      <h1>HaxBall Ready</h1>
       <button 
-        onClick={abrirHaxball}
+        onClick={jugar}
         style={{
-          padding: '20px 40px', fontSize: '22px', backgroundColor: '#4CAF50',
-          color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: 'bold'
+          padding: '20px 40px',
+          fontSize: '20px',
+          backgroundColor: '#4CAF50',
+          color: 'white',
+          border: 'none',
+          borderRadius: '10px',
+          cursor: 'pointer'
         }}
       >
-        ¡JUGAR AHORA!
+        ¡CLIC PARA JUGAR!
       </button>
     </div>
   );
 }
+
+export default App;
